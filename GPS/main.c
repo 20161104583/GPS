@@ -55,12 +55,19 @@ int main()
         t1=(time[0]-'0')*10;
         t2=(time[1]-'0')*1+t1+8;
         printf("时间:%d",t2);
-        fprintf(fw,"%d",t2);
-    for(i=0;i<4;i++)
+        fprintf(fw,"%d/",t2);
+    for(i=0;i<2;i++)
       {
           time[i]=a[i+9];
       }
-        time[4]='\0';
+        time[2]='\0';
+        printf("%s/",time);
+        fprintf(fw,"%s/",time);
+     for(i=0;i<2;i++)
+      {
+          time[i]=a[i+11];
+      }
+        time[2]='\0';
         printf("%s\n",time);
         fprintf(fw,"%s,",time);
     for(k=0;k<2;k++)
@@ -83,7 +90,7 @@ int main()
       }
         longitude[3]='\0';
         printf("经度:%s.",longitude);
-        fprintf(fw,"%s.",longitude);
+        fprintf(fw,"%s/",longitude);
     for(j=0;j<6;j++)
       {
           longitude[j]=a[j+30];
